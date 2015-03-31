@@ -368,6 +368,26 @@ class WebApiContext implements ApiClientAwareContext
 		return $this->response;
 	}
 
+	/**
+	 * Returns placeholder value.
+	 *
+	 * @return string
+	 */
+	protected function getPlaceHolder($key)
+	{
+		return $this->placeHolders[$key];
+	}
+
+	/**
+	 * Returns placeholders.
+	 *
+	 * @return array
+	 */
+	protected function getPlaceHolders()
+	{
+		return $this->placeHolders;
+	}
+
     private function sendRequest()
     {
         try {
